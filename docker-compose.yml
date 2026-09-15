@@ -20,10 +20,7 @@ services:
       - spring-net
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: simple-ai-chat:local
+    image: abbostemirov/simple-ai-chat:latest
     container_name: simple-ai-chat
     restart: unless-stopped
     environment:
