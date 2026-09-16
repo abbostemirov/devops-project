@@ -61,6 +61,8 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd ~/app
+            # GitHub Secrets'dan .env fayl yaratamiz
+            echo "${{ secrets.ENV_FILE }}" > .env
             echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
             docker compose pull
             docker compose up -d --remove-orphans
