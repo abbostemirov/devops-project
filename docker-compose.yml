@@ -24,6 +24,7 @@ services:
     container_name: simple-ai-chat
     restart: unless-stopped
     environment:
+      SPRING_PROFILES_ACTIVE: prod
       DB_HOST: postgres
       DB_PORT: 5432
       DB_NAME: ${DB_NAME}
