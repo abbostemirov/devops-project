@@ -19,5 +19,4 @@ spring:
       ddl-auto: update
     show-sql: true
     open-in-view: false
-  profiles:
-    active: prod
+
